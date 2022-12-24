@@ -162,7 +162,8 @@ h1 span{
 .lady{
     position: absolute;
     bottom: 0;
-    right: calc(50% - 800px);
+    right: 0;
+    /* Більш красиво вирівняє жіночку по правому краю */
 }
 .tt{
     margin-top: 150px;
@@ -199,20 +200,21 @@ h2 span{
 .cap{
     display: flex;
     align-items: flex-end;
-    /* align-items: center; */
+    align-items: center;
     justify-content: flex-start;
     /* Чи потрібно тут для вирівнювання align-item , бо як задав однакову висоту наче і самі вирівнялись */
+    /* Краще не обмежувати елементи по висоті, а вирівнювати саме за допомогою align-item */
 
 }
 .number__2{
     font-size: 50px;
     color: #46b1de;
-    height: 60px;
+    /* height: 60px; */
 }
 .description{
     color: #46b1de;
     width: 190px;
-    height: 40px;
+    /* height: 40px; */
     padding: 10px;
     font-weight: 700;
 }
@@ -227,6 +229,7 @@ h2 span{
     justify-content: space-between;
     margin-top: 50px;
     /* flex-direction: column; */
+    /* Спробуйте тут все ж таки обійтися одними грідами, без додаткових column та флексів */
 }
 h1, h2 {
     font-family: 'Russo One', sans-serif;
@@ -243,9 +246,13 @@ body{
     background: linear-gradient(90deg, rgba(161,199,212,1) 0%, rgba(18,129,167,1) 100%);
 } */
 
-.footer__container{
+.footer {
     background: linear-gradient(90deg, rgba(161,199,212,1) 0%, rgba(18,129,167,1) 100%);
     margin-top: 50px;
+    /* Футер не займав всю ширину екрану до цього */
+}
+
+.footer__container{
     padding-top: 25px;
     display: flex;
     justify-content: space-between;
